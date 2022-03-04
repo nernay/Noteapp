@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewProject</title>
+</head>
+<style>
+    input,button {
+        padding: 7px;
+        height: 40px;
+    }
+    fieldset {
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <h2 id ='title'>Local storage -Javascript-Decode</h2>
+    <fieldset>
+        <legend>Insert the data</legend>
+        <input type="text" id="inpKey" placeholder="Enter key">
+        <input type="text" id="inpValue" placeholder="Enter value">
+        <button type="button" id="btn-Insert">Insert Data</button>
+    </fieldset>
+    <fieldset>
+        <legend>Local Storage option we have</legend>
+        <div id="IsOutput"></div>
+    </fieldset>
+
+
+
+    <script>
+        // it is storing value in the form of key value we have 
+        const inpKey = document.getElementById("inpKey");
+        const inpValue = document.getElementById("inpValue");
+        const btnInsert = document.getElementById("btn-Insert")
+        const isOutput  = document.getElementById("IsOutput")
+        // on clicking the button we get form the inside the task 
+        btnInsert.onclick = function(){
+            const key = inpKey.value;
+            const value = inpValue.value;
+            // if both of the value results to true
+            // we will define the condition 
+        if (key && value){
+            localStorage.setItem(key,value);
+            location.reload()
+
+        }
+
+            
+        };
+        for(let i = 0; i<localStorage.length; i++){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            isOutput.innerHTML += `${key}: ${value}<br />`
+            
+        };
+
+   </script>
+    
+</body>
+</html>

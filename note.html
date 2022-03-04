@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ip1 {
+            border-radius: 18px;
+            padding: 20px; 
+            width: 200px;
+            height: 150px;  
+        }
+        .block {
+          display: block;
+          width: 10%;
+          border: none;
+          background-color: #04AA6D;
+          padding: 14px 28px;
+          font-size: 16px;
+        }
+        .block:hover {
+            background-color: #ddd;
+            color: black;
+        } 
+    </style>
+</head>
+<body>
+    
+<script src="app.js"></script>
+<header>
+<div class="container">
+    <h1>Simple Note application </h1>
+    <textarea name="" class="ip1"  id="note-text"placeholder="Enter here" ></textarea>
+    <button id = "add-btn" class="block">Add note</button>
+</div>
+</header>
+
+<section>
+    <div class = "container">
+        <h2>Your notes </h2>
+        <hr>
+        <div id="notes">
+            <p class="note-counter">Note 1</p>
+            <h3 class="note-title">Hello world</h3>
+            <p class="note-text">Some Note text</p>
+            <button class="note-btn">Delete Note</button>
+            <button class="note-btn edit-btn">Edit note</button>
+        </div>
+    </div>
+      
+</section>
+    
+</body>
+</html>
